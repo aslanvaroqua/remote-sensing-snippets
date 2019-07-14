@@ -11,3 +11,5 @@ gdalwarp \
   -dstalpha \
   $GEOTIFF_IN \
   $GEOTIFF_OUT
+  
+  gdal_edit.py -a_srs EPSG:4326 /home/ubuntu/geoserver_data/workspaces/lakeserver/lakes/87f4b651-8fad-46ef-9033-b12595dbf330.tif
