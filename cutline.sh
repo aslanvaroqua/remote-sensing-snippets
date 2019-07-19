@@ -2,9 +2,10 @@
 input="/home/ubuntu/jobs"
 while IFS= read -r UUID
 do
-  CUTLINE=/home/ubuntu/geoserver_data/workspaces/lakeserver/lakes/$UUID.shp
-  GEOTIFF_IN=/home/ubuntu/Desktop/TEST1.tif
-  GEOTIFF_OUT=/home/ubuntu/geoserver_data/workspaces/lakeserver/lakes/$UUID.TIF
+  CUTLINE=/home/ubuntu/geoserver_data/workspaces/latest/shp_in/$UUID.shp
+  GEOTIFF_IN=/home/ubuntu/geoserver_data/workspaces/latest/tif_in/all.tif
+  GEOTIFF_OUT=/home/ubuntu/geoserver_data/workspaces/latest/tif_out/$UUID.TIF
+  COUNTOUR_OUT=/home/ubuntu/geoserver_data/workspaces/latest/countour_out/$UUID.TIF
 
   gdalwarp \
     -s_srs EPSG:4326 \
@@ -26,7 +27,7 @@ do
     -i 3.0 \
     -f "ESRI Shapefile" \
     $GEOTIFF_OUT \
-    $UUID.countour.shp
+    $COUNTOUR_OUT
    
    echo "$UUID" complete
 done < "$input"
