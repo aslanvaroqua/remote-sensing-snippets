@@ -1,5 +1,5 @@
   #!/bin/bash
-input="/home/ubuntu/jobs"
+input="/home/ubuntu/geoserver_data/workspaces/latest/shp_in/input_list.txt"
 while IFS= read -r UUID
 do
   CUTLINE=/home/ubuntu/geoserver_data/workspaces/latest/shp_in/$UUID.shp
