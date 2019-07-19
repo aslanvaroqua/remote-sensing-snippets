@@ -32,4 +32,7 @@ do
    echo "$UUID" complete
 done < "$input"
 
+#python
+# for x in os.listdir("/home/ubuntu/geoserver_data/workspaces/tif_in/"):
+#     os.system("cp " + x + " ../countour_out/" + x.replace(".TIF","") + "/ -R")
 
