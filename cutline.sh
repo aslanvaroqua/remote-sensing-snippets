@@ -3,7 +3,7 @@ input="/home/ubuntu/geoserver_data/workspaces/latest/shp_in/input_list.txt"
 while IFS= read -r UUID
 do
   CUTLINE=/home/ubuntu/geoserver_data/workspaces/latest/shp_in/$UUID.shp
-  GEOTIFF_IN=/home/ubuntu/geoserver_data/workspaces/latest/tif_in/all.tif
+  GEOTIFF_IN=/home/ubuntu/geoserver_data/workspaces/latest/tif_in/latest.tif
   GEOTIFF_OUT=/home/ubuntu/geoserver_data/workspaces/latest/tif_out/$UUID.TIF
   COUNTOUR_OUT=/home/ubuntu/geoserver_data/workspaces/latest/countour_out/$UUID.TIF
 
